@@ -1,0 +1,30 @@
+{
+  "name": "node-translation",
+  "version": "1.0.0",
+  "description": "Node command line translation!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KangJun-KJ/node-translation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KangJun-KJ/node-translation/issues"
+  },
+  "bin": {
+    "tn": "./bin/translation.js",
+    "translation": "./bin/translation.js"
+  },
+  "homepage": "https://github.com/KangJun-KJ/node-translation#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "ora": "^3.2.0",
+    "request": "^2.88.0"
+  }
+}
