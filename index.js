@@ -1,4 +1,3 @@
-const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
@@ -6,8 +5,8 @@ const request = require("request");
 const chalk = require("chalk");
 const ora = require("ora");
 const log = console.log;
-
-let history = JSON.parse(fs.readFileSync(path.resolve(__dirname, './history.json')));
+const historyPath = path.resolve(__dirname, './history.json');
+let history = JSON.parse(fs.readFileSync(historyPath));
 
 module.exports = function (strarr) {
   strarr = strarr.join(" ");
@@ -75,11 +74,12 @@ module.exports = function (strarr) {
               count: 1
             }
           }
-          fs.writeFile("./history.json", JSON.stringify(history), function (err) {
+          log(history)
+          fs.writeFile(historyPath, JSON.stringify(history), function (err) {
             if (err) {
               console.log(err)
             }
-            // console.log('存储成功！');
+            console.log('存储成功！');
           });
         }
 

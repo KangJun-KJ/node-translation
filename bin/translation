@@ -7,6 +7,8 @@ const package = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.j
 const history = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../history.json')));
 const translation = require("../index.js");
 
+const historyPath = path.resolve(__dirname, '../history.json');
+
 // console.log(package);
 program
   .usage(`\r\n  Repository: ${package.repository.url}`)
@@ -58,7 +60,7 @@ if (program.showTable) {
   })
   console.log(`${'-'.repeat(len1)}  ${'-'.repeat(len2+1)}  ${'-'.repeat(len3+1)}  `);
 } else if (program.clearTable) {
-  fs.writeFile("../history.json", JSON.stringify({}), function (err) {
+  fs.writeFile(historyPath, JSON.stringify({}), function (err) {
     if (err) {
       console.log(err);
       return;
