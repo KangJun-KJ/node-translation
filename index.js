@@ -74,12 +74,12 @@ module.exports = function (strarr) {
               count: 1
             }
           }
-          log(history)
+          // log(history)
           fs.writeFile(historyPath, JSON.stringify(history), function (err) {
             if (err) {
               console.log(err)
             }
-            console.log('存储成功！');
+            // console.log('存储成功！');
           });
         }
 
