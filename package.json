@@ -1,6 +1,6 @@
 {
   "name": "node-translation",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Node command line translation!",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,8 @@
     "url": "https://github.com/KangJun-KJ/node-translation/issues"
   },
   "bin": {
-    "tn": "./bin/translation.js",
-    "translation": "./bin/translation.js"
+    "tn": "./bin/translation",
+    "translation": "./bin/translation"
   },
   "homepage": "https://github.com/KangJun-KJ/node-translation#readme",
   "dependencies": {
